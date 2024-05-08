@@ -66,6 +66,7 @@ Para desplegar el programa, compila y ejecuta la clase `Usuario`.
 
 * [Java](https://www.java.com/) - El lenguaje de programación usado
 * [JUnit](https://junit.org/junit5/) - Framework de pruebas
+* [Swing](https://docs.oracle.com/javase/tutorial/uiswing/) - Usado para la interfaz gráfica de usuario
 
 ## Autores ✒️
 
