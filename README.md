@@ -1,4 +1,4 @@
-# 4-Prueba-de-Patrones-de-Comportamiento
+# 4: Prueba de Patrones de Comportamiento
 
 # Problema de Parar
 
