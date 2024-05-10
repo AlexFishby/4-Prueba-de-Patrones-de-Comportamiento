@@ -72,11 +72,15 @@ La Vista es la representación visual de los datos del Modelo.
 El Controlador maneja la entrada del usuario y actualiza el Modelo y la Vista en consecuencia.
 
 * Modelo:  
+
 ProgramHandler: Esta clase parece manejar la lógica de negocio de tu aplicación, por lo que podría considerarse parte del Modelo.
+
 CountUpHandler y CountDownHandler: Estas clases también parecen manejar la lógica de negocio y podrían considerarse parte del Modelo.
+
 InfiniteLoopException: Aunque es una excepción, está directamente relacionada con la lógica de negocio de tu aplicación, por lo que podría considerarse parte del Modelo.
 
-* Vista:  
+* Vista:
+  
 Vista: Esta clase parece ser la interfaz de usuario de tu aplicación, por lo que sería la Vista en el patrón MVC.
 
 * Controlador:
