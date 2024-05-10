@@ -76,6 +76,10 @@ Este proyecto utiliza JUnit para las pruebas unitarias. Para ejecutar las prueba
 
 Para desplegar el programa, compila y ejecuta la clase `Usuario`.
 
+## JavaDoc 📝
+
+* Enlace para acceder al JavaDoc: RutaAlGuardar/4-Prueba-de-Patrones-de-Comportamiento/JavaDoc/index.html
+
 ## Construido con 🛠️
 
 * [Java](https://www.java.com/) - El lenguaje de programación usado
@@ -86,4 +90,6 @@ Para desplegar el programa, compila y ejecuta la clase `Usuario`.
 
 * **AlexFishby** - *Trabajo Inicial* - [AlexFishby](https://github.com/AlexFishby)
 
-**Enlace al repositorio: https://github.com/AlexFishby/4-Prueba-de-Patrones-de-Comportamiento.git
+* Enlace al repositorio: https://github.com/AlexFishby/4-Prueba-de-Patrones-de-Comportamiento.git
+
+
