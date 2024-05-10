@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"Controlador"},{"l":"Excepciones"},{"l":"Modelo.Codigo"},{"l":"Modelo.Handler.Handler"},{"l":"Vista"}];updateSearchResults();
