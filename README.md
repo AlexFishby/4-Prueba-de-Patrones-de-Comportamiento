@@ -4,6 +4,16 @@
 
 Este proyecto implementa una simulación del problema de parar, también conocido como el problema de la parada. El problema de parar es un problema fundamental en la teoría de la computación que se refiere a la cuestión de si, dado un programa y una entrada, el programa terminará o continuará para siempre.
 
+## Patrones de Diseño
+
+* Chain of responsability
+
+El patrón de diseño Chain of Responsibility se utiliza en el proyecto para manejar diferentes tipos de programas. Este patrón de diseño permite pasar solicitudes a lo largo de una cadena de manejadores. Cuando un objeto recibe una solicitud, puede pasar la solicitud a lo largo de la cadena hasta que un objeto maneje la solicitud.
+
+En el caso de este proyecto, cada manejador en la cadena representa un tipo de programa diferente. Cuando se recibe una solicitud para manejar un programa, el manejador verifica si puede manejar el tipo de programa. Si puede, maneja el programa; si no puede, pasa la solicitud al siguiente manejador en la cadena. 
+
+Este patrón de diseño es útil en este proyecto porque permite agregar, eliminar o reordenar los manejadores de programas sin cambiar el código que emite la solicitud. Esto hace que el código sea más flexible y fácil de mantener. 
+
 ## Uso y construcción de las clases
 
 Este proyecto consta de varias clases que trabajan juntas para simular el problema de parar.
@@ -53,6 +63,25 @@ Las clases `CountDownProgram` y `CountUpProgram` implementan la interfaz `Progra
 La clase `InfiniteLoopException` se utiliza para indicar cuando un programa entra en un bucle infinito. Esta excepción se puede lanzar desde el método `run` de las clases `CountDownProgram` y `CountUpProgram` y se puede capturar y manejar en la clase `Usuario`.
 
 Las clases `CountUpHandler` y `CountDownHandler` son subclases de `ProgramHandler` y manejan los programas `CountUpProgram` y `CountDownProgram` respectivamente. Estas clases siguen el patrón de diseño de la cadena de responsabilidad, donde cada manejador sabe cómo manejar un tipo específico de programa y, si no puede manejarlo, pasa la solicitud al siguiente manejador en la cadena.
+
+## Modelo Vista Controlador
+
+En el patrón de diseño Modelo-Vista-Controlador (MVC), las responsabilidades de la aplicación se dividen en tres componentes interconectados:  
+El Modelo representa los datos y la lógica de negocio de la aplicación.
+La Vista es la representación visual de los datos del Modelo.
+El Controlador maneja la entrada del usuario y actualiza el Modelo y la Vista en consecuencia.
+
+* Modelo:  
+ProgramHandler: Esta clase parece manejar la lógica de negocio de tu aplicación, por lo que podría considerarse parte del Modelo.
+CountUpHandler y CountDownHandler: Estas clases también parecen manejar la lógica de negocio y podrían considerarse parte del Modelo.
+InfiniteLoopException: Aunque es una excepción, está directamente relacionada con la lógica de negocio de tu aplicación, por lo que podría considerarse parte del Modelo.
+
+* Vista:  
+Vista: Esta clase parece ser la interfaz de usuario de tu aplicación, por lo que sería la Vista en el patrón MVC.
+
+* Controlador:
+
+Usuario: Esta clase parece manejar la entrada del usuario y actualizar el Modelo y la Vista en consecuencia, por lo que podría considerarse el Controlador.
 
 ## Comenzando 🚀
 
