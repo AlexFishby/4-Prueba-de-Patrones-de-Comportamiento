@@ -8,11 +8,15 @@ Este proyecto implementa una simulación del problema de parar, también conocid
 
 * Chain of responsability
 
-El patrón de diseño Chain of Responsibility se utiliza en el proyecto para manejar diferentes tipos de programas. Este patrón de diseño permite pasar solicitudes a lo largo de una cadena de manejadores. Cuando un objeto recibe una solicitud, puede pasar la solicitud a lo largo de la cadena hasta que un objeto maneje la solicitud.
+En este proyecto, el patrón Chain of Responsibility se implementa a través de una serie de manejadores, cada uno capaz de manejar un tipo específico de programa. Cada manejador es una clase que implementa la interfaz `ProgramHandler`.
 
-En el caso de este proyecto, cada manejador en la cadena representa un tipo de programa diferente. Cuando se recibe una solicitud para manejar un programa, el manejador verifica si puede manejar el tipo de programa. Si puede, maneja el programa; si no puede, pasa la solicitud al siguiente manejador en la cadena. 
+Un ejemplo de esto es la clase `CountDownHandler`. Esta clase tiene un método `handleProgram` que toma un tipo de programa como argumento. Si el tipo de programa es "down", entonces `CountDownHandler` puede manejarlo y crea una instancia de `CountDownProgram`, verifica si se detiene y luego invierte su comportamiento.
 
-Este patrón de diseño es útil en este proyecto porque permite agregar, eliminar o reordenar los manejadores de programas sin cambiar el código que emite la solicitud. Esto hace que el código sea más flexible y fácil de mantener. 
+Si `CountDownHandler` no puede manejar el tipo de programa (es decir, si el tipo de programa no es "down"), entonces pasa la solicitud al siguiente manejador en la cadena. Esto se hace a través de la línea `nextHandler.handleProgram(programType);`.
+
+Este patrón se repite para cada manejador en la cadena. Cada manejador verifica si puede manejar el tipo de programa y, si no puede, pasa la solicitud al siguiente manejador. Esto continúa hasta que se encuentra un manejador que puede manejar el tipo de programa o hasta que se agoten todos los manejadores.
+
+Este patrón de diseño permite que el código sea flexible y fácil de mantener, ya que puedes agregar, eliminar o reordenar manejadores sin tener que cambiar el código que emite la solicitud. Además, cada manejador puede concentrarse en manejar su propio tipo de programa, lo que hace que el código sea más modular y fácil de entender.
 
 ## Uso y construcción de las clases
 
