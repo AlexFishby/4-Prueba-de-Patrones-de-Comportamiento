@@ -12,13 +12,25 @@ Este proyecto consta de varias clases que trabajan juntas para simular el proble
 
 La clase `Usuario` es la clase principal que interactúa con el usuario y ejecuta los programas y análisis correspondientes. Esta clase contiene el método `main`, que se ejecuta al iniciar el programa. En este método, se le pide al usuario que elija entre ejecutar `CountDownProgram` o `CountUpProgram`, y luego se le pide que elija entre analizarlo con `HaltChecker` solo o con `HaltChecker` y luego `Reverser`.
 
+### Clase `ProgramHandler`
+
+La clase `ProgramHandler` es una clase abstracta que define la estructura para manejar diferentes tipos de programas. Tiene un método `setNextHandler` para establecer el siguiente manejador en la cadena de responsabilidad y un método `handleProgram` que debe ser implementado por las clases hijas.
+
+### Clase `CountUpHandler`
+
+La clase `CountUpHandler` es una subclase de `ProgramHandler` que sabe cómo manejar el programa `CountUpProgram`. Si no puede manejar el programa proporcionado, pasa la solicitud al siguiente manejador en la cadena.
+
+### Clase `CountDownHandler`
+
+La clase `CountDownHandler` es otra subclase de `ProgramHandler` que sabe cómo manejar el programa `CountDownProgram`. Al igual que `CountUpHandler`, si no puede manejar el programa proporcionado, pasa la solicitud al siguiente manejador en la cadena.
+
 ### Clase `CountDownProgram`
 
 La clase `CountDownProgram` implementa la interfaz `Program` y proporciona un programa que cuenta hacia abajo. Esta clase tiene un método `run` que ejecuta el programa y devuelve `true` si el programa termina o `false` si entra en un bucle infinito.
 
 ### Clase `CountUpProgram`
 
-La clase `CountUpProgram` también implementa la interfaz `Program` y proporciona un programa que cuenta hacia arriba. Al igual que `CountDownProgram`, esta clase tiene un método `run` que ejecuta el programa y devuelve `false` ya que este programa entra en un bucle infinito.
+La clase `CountUpProgram` también implementa la interfaz `Program` y proporciona un programa que cuenta hacia arriba. Al igual que `CountDownProgram`, esta clase tiene un método `run` que ejecuta el programa y siempre devuelve `false`, ya que este programa entra en un bucle infinito.
 
 ### Clase `InfiniteLoopException`
 
@@ -39,6 +51,8 @@ La clase `Usuario` es la que interactúa con el usuario y controla el flujo del 
 Las clases `CountDownProgram` y `CountUpProgram` implementan la interfaz `Program`, lo que significa que ambas proporcionan una implementación del método `run`. Este método se utiliza en `HaltChecker` para ejecutar el programa y determinar si terminará o entrará en un bucle infinito.
 
 La clase `InfiniteLoopException` se utiliza para indicar cuando un programa entra en un bucle infinito. Esta excepción se puede lanzar desde el método `run` de las clases `CountDownProgram` y `CountUpProgram` y se puede capturar y manejar en la clase `Usuario`.
+
+Las clases `CountUpHandler` y `CountDownHandler` son subclases de `ProgramHandler` y manejan los programas `CountUpProgram` y `CountDownProgram` respectivamente. Estas clases siguen el patrón de diseño de la cadena de responsabilidad, donde cada manejador sabe cómo manejar un tipo específico de programa y, si no puede manejarlo, pasa la solicitud al siguiente manejador en la cadena.
 
 ## Comenzando 🚀
 
