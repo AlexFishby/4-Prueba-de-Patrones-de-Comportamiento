@@ -86,4 +86,4 @@ Para desplegar el programa, compila y ejecuta la clase `Usuario`.
 
 * **AlexFishby** - *Trabajo Inicial* - [AlexFishby](https://github.com/AlexFishby)
 
-
+**Enlace al repositorio: https://github.com/AlexFishby/4-Prueba-de-Patrones-de-Comportamiento.git
