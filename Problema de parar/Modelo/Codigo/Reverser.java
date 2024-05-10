@@ -1,4 +1,4 @@
-package Modelo.Código;
+package Modelo.Codigo;
 
 import Excepciones.InfiniteLoopException;
 

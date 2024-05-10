@@ -1,4 +1,4 @@
-package Modelo.Código;
+package Modelo.Codigo;
 
 /**
  * Clase que implementa la interfaz Program y proporciona un programa que cuenta hacia arriba.
