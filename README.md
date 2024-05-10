@@ -4,6 +4,8 @@
 
 Este proyecto implementa una simulación del problema de parar, también conocido como el problema de la parada. El problema de parar es un problema fundamental en la teoría de la computación que se refiere a la cuestión de si, dado un programa y una entrada, el programa terminará o continuará para siempre.
 
+https://www.youtube.com/watch?v=92WHN-pAFCs
+
 ## Patrones de Diseño
 
 * Chain of responsability
