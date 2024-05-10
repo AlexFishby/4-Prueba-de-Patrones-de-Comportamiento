@@ -1,8 +1,8 @@
 package Modelo.Handler.Handler;
 
-import Modelo.Código.CountDownProgram;
-import Modelo.Código.Reverser;
-import Modelo.Código.HaltChecker;
+import Modelo.Codigo.CountDownProgram;
+import Modelo.Codigo.Reverser;
+import Modelo.Codigo.HaltChecker;
 
 import Excepciones.InfiniteLoopException;
 

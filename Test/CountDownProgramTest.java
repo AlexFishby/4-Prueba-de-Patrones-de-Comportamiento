@@ -1,5 +1,5 @@
 import Excepciones.InfiniteLoopException;
-import Modelo.Código.CountDownProgram;
+import Modelo.Codigo.CountDownProgram;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

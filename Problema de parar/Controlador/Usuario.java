@@ -3,11 +3,11 @@ package Controlador;
 import Modelo.Handler.Handler.CountDownHandler;
 import Modelo.Handler.Handler.CountUpHandler;
 import Modelo.Handler.Handler.ProgramHandler;
-import Modelo.Código.CountDownProgram;
-import Modelo.Código.CountUpProgram;
-import Modelo.Código.HaltChecker;
-import Modelo.Código.Reverser;
-import Modelo.Código.Program;
+import Modelo.Codigo.CountDownProgram;
+import Modelo.Codigo.CountUpProgram;
+import Modelo.Codigo.HaltChecker;
+import Modelo.Codigo.Reverser;
+import Modelo.Codigo.Program;
 import Excepciones.InfiniteLoopException;
 import Vista.Vista;
 

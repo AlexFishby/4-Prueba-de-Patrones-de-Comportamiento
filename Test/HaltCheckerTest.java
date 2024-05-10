@@ -1,6 +1,6 @@
 import Excepciones.InfiniteLoopException;
-import Modelo.Código.CountDownProgram;
-import Modelo.Código.HaltChecker;
+import Modelo.Codigo.CountDownProgram;
+import Modelo.Codigo.HaltChecker;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

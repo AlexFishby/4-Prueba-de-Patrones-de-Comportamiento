@@ -1,9 +1,9 @@
 package Modelo.Handler.Handler;
 
 import Excepciones.InfiniteLoopException;
-import Modelo.Código.CountUpProgram;
-import Modelo.Código.HaltChecker;
-import Modelo.Código.Reverser;
+import Modelo.Codigo.CountUpProgram;
+import Modelo.Codigo.HaltChecker;
+import Modelo.Codigo.Reverser;
 
 /**
  * Clase que implementa la interfaz Program y proporciona un programa que cuenta hacia arriba.

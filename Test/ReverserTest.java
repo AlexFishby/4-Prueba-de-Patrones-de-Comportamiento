@@ -1,6 +1,6 @@
 import Excepciones.InfiniteLoopException;
-import Modelo.Código.CountDownProgram;
-import Modelo.Código.Reverser;
+import Modelo.Codigo.CountDownProgram;
+import Modelo.Codigo.Reverser;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
