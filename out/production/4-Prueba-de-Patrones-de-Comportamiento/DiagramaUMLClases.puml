@@ -1,0 +1,66 @@
+@startuml
+
+class Usuario {
+  +main(args: String[]): void
+}
+
+class Vista {
+  -btnCountDown: JButton
+  -btnCountUp: JButton
+  -btnHalt: JButton
+  -btnReverser: JButton
+  -haltChecker: HaltChecker
+  -reverser: Reverser
+  -countUpHandler: ProgramHandler
+  -countDownHandler: ProgramHandler
+  +Vista()
+  +setCountUpHandler(handler: ProgramHandler): void
+  +getCountUpHandler(): ProgramHandler
+}
+
+class ProgramHandler {
+  +setNextHandler(handler: ProgramHandler): void
+  +handleProgram(program: String): void
+}
+
+class CountUpHandler {
+  +setNextHandler(handler: ProgramHandler): void
+  +handleProgram(program: String): void
+}
+
+class CountDownHandler {
+  +setNextHandler(handler: ProgramHandler): void
+  +handleProgram(program: String): void
+}
+
+class InfiniteLoopException {
+  +InfiniteLoopException(message: String)
+}
+
+class CountDownProgramTest {
+  +testRun(): void
+}
+
+class Reverser {
+  +run(): void
+}
+
+class CountDownProgram {
+  +run(): void
+}
+
+class CountUpProgram {
+  +run(): void
+}
+
+Usuario --> Vista
+Vista --> ProgramHandler
+ProgramHandler --> ProgramHandler: nextHandler
+ProgramHandler <|-- CountUpHandler
+ProgramHandler <|-- CountDownHandler
+CountDownProgramTest --> InfiniteLoopException
+Vista --> Reverser
+Vista --> CountDownProgram
+Vista --> CountUpProgram
+
+@enduml
